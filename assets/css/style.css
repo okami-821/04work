@@ -240,6 +240,11 @@ p {
 	height: 300px;
 	object-fit: cover;
 }
+.section04 .grid-container .item.box-big5 img {
+  height: 400px;
+  object-fit: cover;
+}
+
 .section04 .grid-container .box-big1 {
 	grid-column: 1 / 7;
 }
@@ -259,6 +264,8 @@ p {
 .section04 .grid-container .box-big6 {
 	grid-column: 15 / 17;
 }
+
+
 .section04 .grid-container .box-big7 {
 	grid-column: 1 / 11;
 }
@@ -270,12 +277,10 @@ p {
 	grid-column: 15 / 17;
 	grid-row: 2 / 4;
 }
-.section04 .grid-container .box-big10 {
-	
-}
-.section04 .grid-container .box-big11 {
-	
-}
+
+
+.section04 .grid-container .box-big10 {}
+.section04 .grid-container .box-big11 {}
 .section04 .grid-container .box-big12 {
 	grid-column: 3 / 5;
 }
@@ -289,63 +294,8 @@ p {
 	grid-column: 9 / 11;
 }
 .section04 .grid-container .box-big16 {
-	grid-column: 11 / 13;
-}
-.section04 .grid-container .box-big17 {
 	grid-column: 13 / 15;
 }
-.section04 .grid-container .box-big18 {
-	grid-column: 15 / 17;
-}
-
-
-
-
-
-@media screen and (max-width: 600px){
-	body {
-		background: pink;
-		width: 90%;
-		margin: auto;
-	}
-
-	.read-box p.read.appear {
-		width: 100%;
-	}
-
-
-
-	.section03 {
-		display: block;
-	}	
-	.section03 .left {
-		width: 100%;
-	}
-	.section03 .left .about-wrap {
-		position: static;
-	}
-	.section03 .right {
-		width: 100%;
-		display: block;
-		margin: 0;
-	}
-	.section03 .left .about-wrap p {
-		width: 100%;
-	}
-	.section03 .container {
-		display: block;
-	}
-	.section03 .container .slider {
-		width: 100%;
-	}
-	.section03 .container .thumbnail {
-		width: 100%;
-	}
-	.section03 .container .thumbnail-img {
-		width: calc(100% / 4) !important;
-	}
-}
-
 
 
 
@@ -360,7 +310,7 @@ p {
 
 .img-wrapper {
   position: relative;
-  margin-top: 15px;
+  /* margin-top: 15px; */
 }
 .img-wrapper img {
   width: 100%;
@@ -462,5 +412,52 @@ p {
   }
 }
 
+
+
+
+
+@media screen and (max-width: 600px){
+	body {
+		background: pink;
+		width: 90%;
+		margin: auto;
+	}
+
+	.read-box p.read.appear {
+		width: 100%;
+	}
+
+
+
+	.section03 {
+		display: block;
+	}	
+	.section03 .left {
+		width: 100%;
+	}
+	.section03 .left .about-wrap {
+		position: static;
+	}
+	.section03 .right {
+		width: 100%;
+		display: block;
+		margin: 0;
+	}
+	.section03 .left .about-wrap p {
+		width: 100%;
+	}
+	.section03 .container {
+		display: block;
+	}
+	.section03 .container .slider {
+		width: 100%;
+	}
+	.section03 .container .thumbnail {
+		width: 100%;
+	}
+	.section03 .container .thumbnail-img {
+		width: calc(100% / 4) !important;
+	}
+}
 
 
