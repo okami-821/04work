@@ -1,0 +1,223 @@
+@charset "utf-8";
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+li {
+    list-style: none;
+}
+
+body {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+p {
+	line-height: 1.6;
+}
+
+.tk-container h3 {
+	margin: 0 0 16px 0;
+	font-size: 20px;
+	letter-spacing: 1px;
+	font-family: YuMincho, "Yu Mincho", serif;
+}
+
+
+
+
+/* loding */
+#loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  background-color: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.spinner-wrap {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 25%;
+  left: 0;;
+}
+.spinner {
+  width: 600px;
+  height: 300px;
+  background-color: #FFF;
+  background-image: url(img/site-logo-black.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+@keyframes sk-scaleout {
+	 0% {
+    transrfom: scale(0);
+  }
+  100% {
+  	transform: scale(1.0);
+    opacity: 0;
+  }
+}
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* ページ全体のスクロール制御 */
+.scrollify {
+  height: 100vh;
+  /* padding: 60px; */
+}
+.section01,.section02 {
+  background-color: #979C5D;
+}
+.section03 {
+  background-image: url(img/01_bgimg_pc.jpg);
+}
+.section07 {
+  background-image: url(img/05_bgimg.png);
+}
+
+/* top */
+.top .slide-wrap {
+  display: flex;
+	overflow: hidden;
+  height: 340px;
+}
+.top .slideshow {
+  display: flex;
+  animation: loop-slide 30s infinite linear 1s both;
+  animation-direction: reverse;
+}
+@keyframes loop-slide {
+	from {
+		transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.top .slideshow li {
+  width: 200px;
+  height: 300px;
+}
+.top .slideshow li img {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* read */
+.read-box {
+  padding: 300px 0;
+}
+.read-box p.read {
+  width: 600px;
+  height: auto;
+  font-size: 1.402vw;
+  max-inline-size: max-content;
+  margin-inline: auto;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity .8s, transform .8s;
+}
+.read-box p.read.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 01_POWERFUL&SENSUAL */
+.section03 {
+	display: flex;
+}
+.section03 .left {
+	width: 40%;
+	height: auto;
+	position: relative;
+}
+.section03 .left .about-wrap {
+	position: absolute;
+	bottom: 50px;
+	left: 8%;
+}
+.section03 .left .about-wrap p {
+	width: 90%;
+}
+
+.section03 .right {
+	width: 60%;
+	height: auto;
+	max-inline-size: max-content;
+	margin-inline: auto;
+}
+
+
+.section03 .container {
+  width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0;
+}
+
+
+
+.section03 .container .slider {
+	/* width: 80%; */
+	display: flex;
+	width: 460px;
+	height: auto;
+}
+.section03 .container .slider .slick-img img {
+  height: auto;
+  width: 100%;
+}
+.section03 .container .thumbnail {
+	display: flex;
+	width: 27%;
+	height: auto;
+}
+.section03 .container .thumbnail-img {
+  width: calc(100% / 2) !important;
+	margin-bottom: 5%;
+}
+.section03 .container .thumbnail .thumbnail-img img {
+  height: auto;
+  width: 80px;
+	height: 80px;
+}
+
+.section03 .container .thumbnail .slick-track {
+  transform: unset !important;
+}
+
+.thumbnail-img {
+  opacity: 1;
+  transition: opacity .3s linear;
+}
+.thumbnail .slick-current {
+  opacity: 0.3;
+}
+
+
+
+
