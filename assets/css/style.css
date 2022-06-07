@@ -19,22 +19,31 @@ time, mark, audio, video {
  background: transparent;
  font-size: 62.5%;
 }
-*:focus-ring {
+/* *:focus-ring {
   outline: none;
+} */
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+    outline: none;
 }
+*:focus {
+  outline: none;
+  }
 
 
 /* FONT */
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap'); */
 @font-face {
   font-family: "Zen Kaku Gothic New";
   src: url("./font/ZenKakuGothicNew-Light.ttf") format("ttf"),
 }
 @font-face {
   font-family: "Raleway";
-  src: url("./font/Raleway-VariableFont_wght.ttf") format("ttf"),
+  /* src: url("./font/Raleway-VariableFont_wght.ttf") format("ttf"), */
 }
 @font-face {
   font-family: "Noto Serif JP";
@@ -78,6 +87,9 @@ a {
 .maxwidth39 {
   display: none;
 }
+.maxwidth40 {
+  display: none;
+}
 .tk-container {
   width: 100%;
   overflow-x: hidden;
@@ -99,13 +111,13 @@ a {
   --fill-color: #333;
   display: block;
   padding: 4px 0;
-  font: 700 1rem Raleway, sans-serif;
+  font: 400 140px Raleway, sans-serif;
   -webkit-text-stroke: 3px var(--fill-color);
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  font-size: 140px;
-  font-weight: 200;
+  /* font-size: 140px;
+  font-weight: 200; */
 }
 
 /* SLICK SLIDER */
@@ -225,10 +237,10 @@ a {
 
 /* LODING */
 #loading {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   transition: all 1s;
-  background-color: #FFF;
+  background-color: #333;
   position: fixed;
   top: 0;
   left: 0;
@@ -243,11 +255,12 @@ a {
 .spinner {
   width: 600px;
   height: 300px;
-  background-color: #FFF;
+  background-color: #333;
   background-image: url(img/site-logo-black.png);
   background-repeat: no-repeat;
   background-position: center;
   animation: sk-scaleout 1.0s infinite ease-in-out;
+  background-size: 200px
 }
 @keyframes sk-scaleout {
 	 0% {
@@ -532,7 +545,7 @@ li:nth-child(16) a img {
 .sec03-container .sec03_slider {
 	width: 400px;
 	height: auto;
-  display: flex;
+  /* display: flex; */
 }
 .sec03-container .sec03_slider .slick-img img {
   width: 400px;
@@ -820,7 +833,7 @@ li:nth-child(16) a img {
 .sec06-container .sec06_slider {
 	width: 400px;
 	height: auto;
-  display: flex;
+  /* display: flex; */
 }
 .sec06-container .sec06_slider .slick-img img {
   width: 400px;
@@ -1138,11 +1151,12 @@ li:nth-child(16) a img {
   width: 100%;
   text-align: center;
   display: inline-block;
-  font: 700 2rem Raleway, sans-serif;
+  font-family: 'Zen Kaku Gothic New', '游ゴシック', 'ヒラギノ角ゴ ProN', sans-serif;
   color: #333;
   letter-spacing: 0.1em;
   margin-bottom: 20px;
   line-height: 2;
+  font-size: 20px;
 }
 
 .sec09-infowrap ul {
@@ -1273,6 +1287,9 @@ li:nth-child(16) a img {
     display: block
   }
   .maxwidth39 {
+    display: none;
+  }
+  .maxwidth40 {
     display: none;
   }
   .spinner {
@@ -1783,6 +1800,12 @@ li:nth-child(16) a img {
 }
 
 @media screen and (max-width: 580px) {
+  .maxwidth40 {
+    display: none;
+  }
+  .section02 ul li a {
+    font: 700 2.3rem Raleway, sans-serif;
+  }
   .section03 p, .section04 p, .section05 p, .section06 p, .section07 p, .section08 p {
     line-height: 1.65;
   }
@@ -1796,13 +1819,16 @@ li:nth-child(16) a img {
     flex-direction: column-reverse;
   }
   .section03 .ttl {
-    width: 80%;
+    width: 83%;
     position: absolute;
-    top: 50px;
+    top: 2.6%;
     left: 55px;
   }
+  .section03 .left {
+    padding: 0;
+  }
   .section03 .left .about-wrap {
-    padding: 5% 0 10px 0;
+    padding: 20% 0 10px 0;
   }
   .section03 .left .about-wrap,
   .section04 .about-wrap,
@@ -1812,13 +1838,23 @@ li:nth-child(16) a img {
   .section08 p {
     width: 90%;
   }
+  .section04 {
+    padding: 0;
+  }
   .section04 .ttl {
-    width: 80%;
-    top: 40px;
-    left: 18%;
+    width: 82%;
+    position: absolute;
+    top: 2.2%;
+    left: 16%;
   }
   .section04 .about-wrap {
-    padding: 14% 0 3% 0;
+    padding: 28% 0 3% 0
+  }
+  .section05 {
+    padding: 0;
+  }
+  .section05 .about-wrap {
+    padding: 32% 0 0 0;
   }
   .section05 .about-wrap .ttl {
     width: 80%;
@@ -1826,32 +1862,44 @@ li:nth-child(16) a img {
     top: 50px;
   }
   .section05 .sec05-about-wrap {
-    padding-top: 14%;
+    padding-top: 0;
   }
   .section06 .left {
-    padding: 15% 0 10px 0;
+    padding: 0;
   }
   .section06 .ttl {
     width: 80%;
     position: absolute;
-    top: 50px;
-    left: 70px;
+    top: 3.3%;
+    left: 18%;
   }
   .section06 .left .about-wrap {
-    padding: 5% 0 10px 0;
+    padding: 20% 0 10px 0;
+  }
+  .section07 {
+    padding: 0;
   }
   .section07 .ttl {
-    width: 78%;
+    width: 80%;
     top: 45px;
     left: 18%;
   }
+  .section07 .about-wrap {
+    padding: 32% 0 3% 0;
+  }
+  .sec07-grid-container {
+    padding: 8px 10% 10% 10%;
+  }
+  .section08 {
+    padding: 0;
+  }
   .section08 .ttl {
-    width: 60%;
-    top: 34px;
-    left: 25%;
+    width: 70%;
+    top: 3%;
+    left: 23%;
   }
   .sec08-about-wrap {
-    padding: 18% 0 10px 0;
+    padding: 33% 0 3% 0;
   }
   .sec08-slider {
     padding: 0;
@@ -1880,7 +1928,7 @@ li:nth-child(16) a img {
 
 @media screen and (max-width: 390px) {
   .maxwidth40 {
-    display: block;
+    display: none;
   }
 }
 @media screen and (max-width: 375px) {
