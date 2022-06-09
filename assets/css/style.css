@@ -1972,7 +1972,7 @@ li:nth-child(16) a img {
 /* iPhone X, 11Pro */
 @media screen and (min-height: 812px) and (max-width: 375px) {
   .section01 .toplogo-wrap h1 {
-    width: 100%;
+    width: 600px;
   }
   .section01 .slide-wrap {
     position: absolute;
