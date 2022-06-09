@@ -34,8 +34,8 @@ select {
 
 
 /* FONT */
-@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700');
+/* @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap'); */
 @font-face {
   font-family: "Zen Kaku Gothic New";
@@ -43,7 +43,7 @@ select {
 }
 @font-face {
   font-family: "Raleway";
-  /* src: url("./font/Raleway-VariableFont_wght.ttf") format("ttf"), */
+  src: url("./font/Raleway-VariableFont_wght.ttf") format("ttf"),
 }
 @font-face {
   font-family: "Noto Serif JP";
@@ -116,8 +116,6 @@ a {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  /* font-size: 140px;
-  font-weight: 200; */
 }
 
 /* SLICK SLIDER */
@@ -756,7 +754,7 @@ li:nth-child(16) a img {
 .sec05-slider .slick-slide .desc h4 {
   position: relative;
   left: 50px;
-  line-height: 1;
+  line-height: 1.8;
 }
 .sec05-slider .slick-slide .desc p {
   position: relative;
@@ -1026,7 +1024,7 @@ li:nth-child(16) a img {
 .sec08-slider .slick-slide .desc h4 {
   position: relative;
   left: 50px;
-  line-height: 1;
+  line-height: 1.6;
 }
 .sec08-slider .slick-slide .desc p {
   position: relative;
@@ -1315,7 +1313,7 @@ li:nth-child(16) a img {
   }
   .section01 .header {
     width: 100%;
-    margin: 1% 0 0 1%;
+    margin: 4% 0 0 4%;
   }
   .section01 .header a {
     background-position: right;
@@ -1333,6 +1331,7 @@ li:nth-child(16) a img {
     text-align: center;
     margin: 0;
     padding: 1rem 0;
+    line-height: 1.6;
   }
   .section01 .slide-wrap {
     height: auto;
@@ -1352,9 +1351,7 @@ li:nth-child(16) a img {
     margin: auto;
     padding: 50px 0;
   }
-  .section02 .readBox {
-    width: 100%;
-  }
+
 
   /* sp960_01 POWERFUL&SENSUAL */
 	.section03 {
@@ -1795,7 +1792,7 @@ li:nth-child(16) a img {
     padding: 50px 10px 10px 10px;
   }
   .footer p {
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -1804,16 +1801,24 @@ li:nth-child(16) a img {
     display: none;
   }
   .section02 ul li a {
+    color: #333;
+    background-clip: unset;
+    -webkit-background-clip: unset;
+  }
+  .section02 ul li a {
     font: 700 2.3rem Raleway, sans-serif;
   }
   .section03 p, .section04 p, .section05 p, .section06 p, .section07 p, .section08 p {
     line-height: 1.65;
   }
-  .section01 .toplogo-wrap h1 {
-    width: 80%;
-  }
   .section02 ul {
+    width: 100%;
     margin-top: 50px;
+    padding: 0;
+  }
+  .section02 .readBox {
+    width: 100%;
+    padding: 0;
   }
   .section02 .read-box .read {
     flex-direction: column-reverse;
@@ -1915,14 +1920,30 @@ li:nth-child(16) a img {
   .maxwidth40 {
     display: none;
   }
+  .section02 ul li a {
+    -webkit-text-stroke: 1.4px var(--fill-color);
+  }
+  .section01 .toplogo-wrap {
+    position: absolute;
+    top: 9%;
+    left: 0;
+    right: 0;
+  }
+  .section01 .toplogo-wrap h1 {
+    width: 85%;
+  }
+  .section01 .slide-wrap {
+    position: absolute;
+    top: 61%;
+  }
   .section01 .slideshow li {
-    width: 200px;
+    width: 230px;
   }
 	.sec04-grid-container {
     width: 100%;
 	}
   .section01 .header a img {
-    width: 80px;
+    width:100px;
   }
 }
 
@@ -1930,16 +1951,130 @@ li:nth-child(16) a img {
   .maxwidth40 {
     display: none;
   }
+  .section01 .slideshow li {
+    width: 220px;
+  }
 }
 @media screen and (max-width: 375px) {
+  .section01 .toplogo-wrap h1 {
+    width: 73%;
+  }
   .section01 .slideshow li {
-    width: 160px;
+    width: 150px;
+  }
+  .section01 .slide-wrap {
+    position: static;
+  }
+  .section02 ul li a {
+    font: 700 2rem Raleway, sans-serif;
+  }
+}
+/* iPhone X, 11Pro */
+@media screen and (min-height: 812px) and (max-width: 375px) {
+  .section01 .toplogo-wrap h1 {
+    width: 93%;
+  }
+  .section01 .slide-wrap {
+    position: absolute;
+    top: 60%;
+  }
+  .section01 .slideshow li {
+    width: 270px;
+  }
+}
+/* Andoroid */
+@media screen and (min-height: 640px) and (max-width: 360px) {
+  .section01 .toplogo-wrap,
+  .Android .section01 .toplogo-wrap {
+    position: absolute;
+    top: 11%;
+    left: 0;
+    right: 0;
+  }
+  .section01 .slide-wrap
+  .Android .section01 .slide-wrap {
+    position: absolute;
+    top: 63%;
+  }
+  .Android .toplogo-wrap h1 {
+    width: 78%;
   }
   .section01 .toplogo-wrap h1 {
-    width: 68%;
+    width: 80%;
+  }
+  .section01 .slide-wrap {
+    position: absolute;
+    top: 71%;
+  }
+  .section01 .slideshow li {
+    width: 170px;
+  }
+  .Android .section02 {
+    padding: 200px 0 0 0;
+  }
+  .Android .section02 ul li a {
+    font: 700 1.8rem Raleway, sans-serif;
+  }
+}
+@media screen and (max-width: 320px) {
+  .maxwidth40 {
+    display: block;
+  }
+  .headH3 {
+    font-size: 1.9rem;
+  }
+  .section01 .toplogo-wrap {
+    position: absolute;
+    top: 11%;
+    left: 0;
+    right: 0;
+  }
+  .section01 .slide-wrap {
+    position: absolute;
+    top: 70%;
+  }
+  .section01 .toplogo-wrap h1 {
+    width: 78%;
+  }
+  .section01 .toplogo-wrap p {
+    font-size: 1.8rem;
+  }
+  .section02 {
+    padding: 200px 0 0 0;
+  }
+  .section02 ul li a {
+    font: 700 1.8rem Raleway, sans-serif;
+  }
+  .section04 .ttl {
+    width: 75%;
+    left: 20%;
+  }
+  .section05 .about-wrap .ttl {
+    width: 75%;
+    left: 20%;
+  }
+  .section06 .ttl {
+    width: 75%;
+    left: 20%;
+  }
+  .section08 .ttl {
+    width: 60%;
+    left: 27%;
   }
 }
 @media screen and (max-width: 280px) {
+  .section01 .toplogo-wrap {
+    top: 12%;
+  }
+  .section01 .toplogo-wrap h1 {
+    width: 85%;
+  }
+  .section01 .toplogo-wrap p {
+    font-size: 1.8rem;
+  }
+  .section01 .slideshow li {
+    width: 160px;
+  }
 	.section02 ul li a {
     font: 700 1.5rem Raleway, sans-serif;
 	}
