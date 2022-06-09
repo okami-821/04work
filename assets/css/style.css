@@ -1970,7 +1970,7 @@ li:nth-child(16) a img {
   }
 }
 /* iPhone X, 11Pro */
-@media screen and (min-height: 810px) and (max-width: 375px) {
+@media screen and (min-height: 812px) and (max-width: 375px) {
   .section01 .toplogo-wrap h1 {
     width: 600px;
   }
