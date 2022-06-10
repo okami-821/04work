@@ -2020,7 +2020,11 @@ li:nth-child(16) a img {
     width: 60%;
     left: 27%;
   }
+  .section07 .ttl {
+display: block;
+    width: 100px;
 }
+	
 @media screen and (max-width: 280px) {
   .section01 .toplogo-wrap p {
     font-size: 1.8rem;
